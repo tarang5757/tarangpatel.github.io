@@ -1,0 +1,29 @@
+.navItem {
+  color: white;
+  border-radius: 0.375rem;
+}
+
+.navItem:hover {
+  color: black;
+  background-color: #f8f9fa;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+.navText {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+@media (min-width: 768px) {
+  .navText {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .navText {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

@@ -1,0 +1,24 @@
+.title {
+  text-shadow:
+    3px 3px white,
+    -3px -3px white,
+    3px -3px white,
+    -3px 3px white,
+    -3px 0px white,
+    3px 0px white,
+    0px 3px white,
+    0px -3px white;
+}
+@media (min-width: 1024px) {
+  .title {
+    text-shadow:
+      4px 4px white,
+      -4px -4px white,
+      4px -4px white,
+      -4px 4px white,
+      -4px 0px white,
+      4px 0px white,
+      0px 4px white,
+      0px -4px white;
+  }
+}

@@ -1,0 +1,92 @@
+.title {
+  text-shadow:
+    5px 5px black,
+    -5px -5px black,
+    5px -5px black,
+    -5px 5px black,
+    -5px 0px black,
+    5px 0px black,
+    0px 5px black,
+    0px -5px black,
+    0px 9px 10px black;
+}
+
+.date {
+  text-shadow:
+    3px 3px black,
+    -3px -3px black,
+    3px -3px black,
+    -3px 3px black,
+    -3px 0px black,
+    3px 0px black,
+    0px 3px black,
+    0px -3px black,
+    0px 7px 10px black;
+}
+
+@media (min-width: 1024px) {
+  .title {
+    text-shadow:
+      6px 6px black,
+      -6px -6px black,
+      6px -6px black,
+      -6px 6px black,
+      -6px 0px black,
+      6px 0px black,
+      0px 6px black,
+      0px -6px black,
+      0px 10px 10px black;
+  }
+}
+@media (min-width: 1280px) {
+  .title {
+    text-shadow:
+      8px 8px black,
+      -8px -8px black,
+      8px -8px black,
+      -8px 8px black,
+      -8px 0px black,
+      8px 0px black,
+      0px 8px black,
+      0px -8px black,
+      0px 13px 10px black;
+  }
+  .date {
+    text-shadow:
+      4px 4px black,
+      -4px -4px black,
+      4px -4px black,
+      -4px 4px black,
+      -4px 0px black,
+      4px 0px black,
+      0px 4px black,
+      0px -4px black,
+      0px 8px 10px black;
+  }
+}
+@media (min-width: 1536px) {
+  .title {
+    text-shadow:
+      9px 9px black,
+      -9px -9px black,
+      9px -9px black,
+      -9px 9px black,
+      -9px 0px black,
+      9px 0px black,
+      0px 9px black,
+      0px -9px black,
+      0px 15px 10px black;
+  }
+  .date {
+    text-shadow:
+      6px 6px black,
+      -6px -6px black,
+      6px -6px black,
+      -6px 6px black,
+      -6px 0px black,
+      6px 0px black,
+      0px 6px black,
+      0px -6px black,
+      0px 10px 10px black;
+  }
+}

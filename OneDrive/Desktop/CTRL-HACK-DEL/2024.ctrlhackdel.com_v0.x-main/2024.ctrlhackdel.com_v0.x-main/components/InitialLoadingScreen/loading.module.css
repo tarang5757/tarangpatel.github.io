@@ -1,0 +1,39 @@
+.loadingOutline {
+  text-shadow:
+    4px 4px black,
+    -4px 4px black,
+    -4px -4px black,
+    4px -4px black,
+    6px 6px black,
+    -6px 6px black,
+    -6px -6px black,
+    6px -6px black;
+}
+
+.loadingProgressBar {
+  background: linear-gradient(
+    -123deg,
+    #cc5a44,
+    #970000,
+    #a44a4a,
+    rgb(217, 98, 0)
+  );
+  background-size: 600% 600%;
+  animation: loading-gradient 5s ease-in-out infinite;
+  box-shadow:
+    -4px -4px 4px rgba(255, 255, 255, 0.2),
+    4px 4px 20px rgba(0, 0, 0, 0.8),
+    -6px 6px 16px rgba(255, 68, 0, 0.5);
+}
+
+@keyframes loading-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
