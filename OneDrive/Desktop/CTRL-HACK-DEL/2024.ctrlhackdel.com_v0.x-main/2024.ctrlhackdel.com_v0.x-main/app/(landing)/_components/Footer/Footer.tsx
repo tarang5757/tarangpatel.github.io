@@ -109,10 +109,7 @@ const Footer = ({ }: FooterProps) => {
             width={3000}
             className=" object-fit"
           />
-
-
         </div>
-
       </div>
     </footer>
   );
