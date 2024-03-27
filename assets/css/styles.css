@@ -493,7 +493,42 @@ header {
   width: 100%;
 }
 
+/*Project*/
+.project {
+  text-align: center;
+}
+
+.project {
+  text-align: center;
+}
+
+.project_container {
+  row-gap: 2rem;
+}
+
+.project_img {
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-height: 150px;
+}
+
+.project_img img {
+  transition: 1s;
+  cursor: pointer;
+}
+
+.project_img img:hover {
+  transform: scale(1.2);
+}
+
+
+
 /*Work*/
+.work {
+  text-align: center;
+}
+
 .work {
   text-align: center;
 }
