@@ -86,7 +86,7 @@ sr.reveal(".skills_subtitle", {});
 sr.reveal(".skills_text", {});
 sr.reveal(".skills_data", { interval: 200 });
 sr.reveal(".skills_img", { delay: 600 });
-
+1
 /*SCROLL WORK*/
 sr.reveal(".work_img", { interval: 200 });
 
