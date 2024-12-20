@@ -87,8 +87,11 @@ sr.reveal(".skills_text", {});
 sr.reveal(".skills_data", { interval: 200 });
 sr.reveal(".skills_img", { delay: 600 });
 1
-/*SCROLL WORK*/
-sr.reveal(".work_img", { interval: 200 });
+/*SCROLL Experience*/
+sr.reveal(".experience_container", { interval: 200 });
+
+sr.reveal(".project_img", { interval: 200 });
+
 
 /*SCROLL CONTACT*/
 sr.reveal(".contact_input", { interval: 200 });

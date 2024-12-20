@@ -14,6 +14,7 @@
 /*Colors*/
 :root {
   --first-color: #a202ff;
+
   --second-color: #14191b;
 }
 
@@ -493,6 +494,102 @@ header {
   width: 100%;
 }
 
+
+/* Experience Section */
+.experience {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.experience_container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr); /* Default: single column */
+}
+
+.experience-img {
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.1);  /* Slightly softer shadow */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-height: 150px;
+  transition: transform 0.3s ease;
+}
+
+.experience-img img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.experience-img img:hover {
+  transform: scale(1.1);
+}
+
+.experience-item {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(14, 36, 49, 0.1);
+  padding: 2rem;
+
+  
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(14, 36, 49, 0.15);
+}
+
+.experience-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color:gold; /* Dim white with soft gray for better contrast */
+}
+
+.experience-item p {
+  font-size: 0.875rem;
+  color: #14191b;  /* A muted grayish white for softer readability */
+  margin-bottom: 1rem;
+}
+
+.experience-item ul {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.experience-item ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #14191b;  /* Light grayish white for list items */
+}
+
+body.dark .experience-item h3 {
+  color: gold; /* Gold for the headings */
+}
+
+body.dark .experience-item p {
+  color: #BFC8D2; /* Muted grayish white */
+}
+
+body.dark .experience-item ul li {
+  color: #E0E0E0; /* Light grayish white for list items */
+}
+
+
+/* Media Queries for Responsiveness */
+@media screen and (min-width: 768px) {
+  .experience_container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .experience_container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+  }
+}
+
+
+
 /*Project*/
 .project {
   text-align: center;
@@ -517,31 +614,7 @@ header {
 
 
 
-/*Work*/
 
-.work {
-  text-align: center;
-}
-
-.work_container {
-  row-gap: 2rem;
-}
-
-.work_img {
-  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  max-height: 150px;
-}
-
-.work_img img {
-  transition: 1s;
-  cursor: pointer;
-}
-
-.work_img img:hover {
-  transform: scale(1.2);
-}
 
 /*Contact*/
 .contact_input {
