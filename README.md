@@ -8,5 +8,3 @@ I made it using:
   - JAVASCRIPT
   - Boxicons - https://boxicons.com/
   - Scroll reveal - https://scrollrevealjs.org/
-
-You can see the site [here](https://www.safetpojskic.com)
