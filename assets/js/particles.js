@@ -12,128 +12,130 @@ var pJS = function (tag_id, params) {
     "#" + tag_id + " > .particles-js-canvas-el"
   );
 
-  /* particles.js variables with default values */
-  this.pJS = {
-    canvas: {
-      el: canvas_el,
-      w: canvas_el.offsetWidth,
-      h: canvas_el.offsetHeight,
-    },
-    particles: {
-      number: {
-        value: 400,
-        density: {
-          enable: true,
-          value_area: 800,
-        },
-      },
-      color: {
-        value: "#fff",
-      },
-      shape: {
-        type: "circle",
-        stroke: {
-          width: 0,
-          color: "#ff0000",
-        },
-        polygon: {
-          nb_sides: 5,
-        },
-        image: {
-          src: "",
-          width: 100,
-          height: 100,
-        },
-      },
-      opacity: {
-        value: 1,
-        random: false,
-        anim: {
-          enable: false,
-          speed: 2,
-          opacity_min: 0,
-          sync: false,
-        },
-      },
-      size: {
-        value: 20,
-        random: false,
-        anim: {
-          enable: false,
-          speed: 20,
-          size_min: 0,
-          sync: false,
-        },
-      },
-      line_linked: {
+ /* Starry Space Theme */
+this.pJS = {
+  canvas: {
+    el: canvas_el,
+    w: canvas_el.offsetWidth,
+    h: canvas_el.offsetHeight,
+  },
+  particles: {
+    number: {
+      value: 480, // More particles for dense star field
+      density: {
         enable: true,
-        distance: 100,
-        color: "#fff",
-        opacity: 1,
-        width: 1,
+        value_area: 150, // Smaller area for dense stars
       },
-      move: {
+    },
+    color: {
+      value: "#ffffff", // White stars
+    },
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 0,
+        color: "#000000",
+      },
+      polygon: {
+        nb_sides: 5,
+      },
+      image: {
+        src: "",
+        width: 100,
+        height: 100,
+      },
+    },
+    opacity: {
+      value: 1,
+      random: true, // Random opacity for more realistic stars
+      anim: {
+        enable: false,
+        speed: 0,
+        opacity_min: 0.1,
+        sync: false,
+      },
+    },
+    size: {
+      value: 1,
+      random: true,
+      anim: {
         enable: true,
-        speed: 2,
-        direction: "none",
-        random: false,
-        straight: false,
-        out_mode: "out",
-        bounce: false,
-        attract: {
-          enable: false,
-          rotateX: 3000,
-          rotateY: 3000,
+        speed: 4,
+        size_min: 0.1,
+        sync: false,
+      },
+    },
+    line_linked: {
+      enable: false, // Disable connecting lines for a clean starry look
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.1,
+      width: 0.1,
+    },
+    move: {
+      enable: true,
+      speed: 0.5, // Slow movement for a calm space effect
+      direction: "left",
+      random: false,
+      straight: true,
+      out_mode: "out",
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200,
+      },
+    },
+    array: [],
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "grab",
+      },
+      onclick: {
+        enable: true,
+        mode: "push",
+      },
+      resize: true,
+    },
+    modes: {
+      grab: {
+        distance: 140,
+        line_linked: {
+          opacity: 1,
         },
       },
-      array: [],
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: {
-          enable: true,
-          mode: "grab",
-        },
-        onclick: {
-          enable: true,
-          mode: "push",
-        },
-        resize: true,
+      bubble: {
+        distance: 400,
+        size: 40,
+        duration: 2,
+        opacity: 8,
+        speed: 3,
       },
-      modes: {
-        grab: {
-          distance: 100,
-          line_linked: {
-            opacity: 1,
-          },
-        },
-        bubble: {
-          distance: 200,
-          size: 80,
-          duration: 0.4,
-        },
-        repulse: {
-          distance: 200,
-          duration: 0.4,
-        },
-        push: {
-          particles_nb: 4,
-        },
-        remove: {
-          particles_nb: 2,
-        },
+      repulse: {
+        distance: 200,
+        duration: 0.4,
       },
-      mouse: {},
+      push: {
+        particles_nb: 4,
+      },
+      remove: {
+        particles_nb: 2,
+      },
     },
-    retina_detect: false,
-    fn: {
-      interact: {},
-      modes: {},
-      vendors: {},
-    },
-    tmp: {},
-  };
+    mouse: {},
+  },
+  retina_detect: true, // Enable sharp rendering on Retina displays
+  fn: {
+    interact: {},
+    modes: {},
+    vendors: {},
+  },
+  tmp: {},
+};
 
   var pJS = this.pJS;
 

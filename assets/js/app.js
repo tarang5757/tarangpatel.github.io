@@ -1,33 +1,24 @@
 /*Intro animation*/
-const intro = document.querySelector(".intro");
-const logo = document.querySelector(".logo-header");
-const logoSpan = document.querySelectorAll(".logo");
+var loader = document.getElementById("preloader");
+window.addEventListener("load", function () {
+setTimeout(function() {
+    loader.style.display = "none";
+    }, 3000);
 
-window.addEventListener("DOMContentLoaded", () => {
-  logoSpan.forEach((span, idx) => {
-    setTimeout(() => {
-      span.classList.add("appear");
-    }, (idx + 1) * 90);
-  });
+    document.addEventListener("contextmenu", function(e){
+if (e.target.nodeName === "IMG") {
+  e.preventDefault();
+}
+}, false);
 
-  setTimeout(() => {
-    logoSpan.forEach((span, idx) => {
-      setTimeout(() => {
-        span.classList.remove("appear");
-        span.classList.add("fade");
-      }, (idx + 1) * 80);
-    });
-  }, 1500);
+})
 
-  setTimeout(() => {
-    intro.style.top = "-100vh";
-  }, 2000);
-});
+
 
 /*Show menu*/
 const showMenu = (toggleId, navID) => {
   const toggle = document.getElementById(toggleId);
-  nav = document.getElementById(navID);
+  const nav = document.getElementById(navID);
 
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
@@ -53,7 +44,6 @@ function linkAction() {
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 /*Auto write text*/
-
 var app = document.getElementById("autoWrite");
 
 var typewriter = new Typewriter(app, {
@@ -86,12 +76,10 @@ sr.reveal(".skills_subtitle", {});
 sr.reveal(".skills_text", {});
 sr.reveal(".skills_data", { interval: 200 });
 sr.reveal(".skills_img", { delay: 600 });
-1
+
 /*SCROLL Experience*/
 sr.reveal(".experience_container", { interval: 200 });
-
 sr.reveal(".project_img", { interval: 200 });
-
 
 /*SCROLL CONTACT*/
 sr.reveal(".contact_input", { interval: 200 });
@@ -103,8 +91,116 @@ toggleDarkMode.addEventListener("change", () => {
   document.body.classList.toggle("dark");
   document.getElementById("head").classList.toggle("dark");
 });
-document.body.classList.toggle("dark");
-document.getElementById("head").classList.toggle("dark");
 
-/*Particles.js*/
-particlesJS.load("particles-js", "assets/particles.json");
+/*Particles.js - Starry Theme*/
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 480,
+      "density": {
+        "enable": true,
+        "value_area": 150
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 0,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 4,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.1,
+      "width": 0.1
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.5,
+      "direction": "left",
+      "random": false,
+      "straight": true,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
